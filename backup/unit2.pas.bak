@@ -1,0 +1,75 @@
+unit Unit2;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+   Classes, SysUtils, FileUtil, SynHighlighterHTML, IpHtml, Ipfilebroker, Forms,
+ Controls, Graphics, Dialogs, ExtCtrls, ComCtrls, StdCtrls, DbCtrls,
+ LazHelpHTML, Buttons;
+
+type
+
+  { TForm2 }
+
+  TForm2 = class(TForm)
+    Button1: TButton;
+    HTMLBrowserHelpViewer1: THTMLBrowserHelpViewer;
+    Image1: TImage;
+    TreeView1: TTreeView;
+    procedure BitBtn1Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
+    procedure IpHtmlPanel1Click(Sender: TObject);
+    procedure IpHtmlPanel1ConstrainedResize(Sender: TObject; var MinWidth,
+      MinHeight, MaxWidth, MaxHeight: TConstraintSize);
+    procedure Memo1Change(Sender: TObject);
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.lfm}
+
+{ TForm2 }
+
+procedure TForm2.Image1Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm2.IpHtmlPanel1Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm2.IpHtmlPanel1ConstrainedResize(Sender: TObject; var MinWidth,
+  MinHeight, MaxWidth, MaxHeight: TConstraintSize);
+begin
+
+end;
+
+procedure TForm2.Memo1Change(Sender: TObject);
+begin
+
+end;
+
+procedure TForm2.Button1Click(Sender: TObject);
+begin
+   Form2.Hide;
+end;
+
+procedure TForm2.BitBtn1Click(Sender: TObject);
+begin
+
+end;
+
+end.
+

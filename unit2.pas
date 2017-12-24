@@ -5,12 +5,9 @@ unit Unit2;
 interface
 
 uses
-   Classes, SysUtils, FileUtil, SynHighlighterHTML, IpHtml, Ipfilebroker, Forms,
- Controls, Graphics, Dialogs, ExtCtrls, ComCtrls, StdCtrls, DbCtrls,
- LazHelpHTML, Buttons, RichMemo;
-
+   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
+   ComCtrls, StdCtrls, DbCtrls, Buttons, RichMemo;
 type
-
   { TForm2 }
 
   TForm2 = class(TForm)
@@ -19,14 +16,8 @@ type
     RichMemo1: TRichMemo;
     TreeView1: TTreeView;
     files_path: TStringList;
-    procedure BitBtn1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure Image1Click(Sender: TObject);
-    procedure IpHtmlPanel1Click(Sender: TObject);
-    procedure IpHtmlPanel1ConstrainedResize(Sender: TObject; var MinWidth,
-      MinHeight, MaxWidth, MaxHeight: TConstraintSize);
-    procedure Memo1Change(Sender: TObject);
     procedure TreeView1OnSelectionChanged(Sender: TObject);
   private
     { private declarations }
@@ -42,27 +33,6 @@ implementation
 {$R *.lfm}
 
 { TForm2 }
-
-procedure TForm2.Image1Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm2.IpHtmlPanel1Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm2.IpHtmlPanel1ConstrainedResize(Sender: TObject; var MinWidth,
-  MinHeight, MaxWidth, MaxHeight: TConstraintSize);
-begin
-
-end;
-
-procedure TForm2.Memo1Change(Sender: TObject);
-begin
-
-end;
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
@@ -80,10 +50,6 @@ begin
    else Exit();
 end;
 
-procedure TForm2.BitBtn1Click(Sender: TObject);
-begin
-
-end;
 
 procedure TForm2.TreeView1OnSelectionChanged(Sender: TObject);
 var
@@ -110,7 +76,7 @@ begin
 
        FreeAndNil(source);
      end;
-     end;
+    end;
 end;
 
 end.

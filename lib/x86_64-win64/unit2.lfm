@@ -1,14 +1,15 @@
 object Form2: TForm2
-  Left = -73
+  Left = 0
   Height = 610
-  Top = 175
+  Top = 118
   Width = 1175
   BorderStyle = bsDialog
   Caption = 'Form2'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 610
+  ClientWidth = 1175
+  OnCreate = FormCreate
   Position = poDesktopCenter
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.0.6'
   object Image1: TImage
     Left = 0
     Height = 610
@@ -1954,22 +1955,28 @@ object Form2: TForm2
     }
   end
   object TreeView1: TTreeView
-    Left = 16
+    Left = 40
     Height = 500
-    Top = 16
-    Width = 400
-    DefaultItemHeight = 44
+    Top = 32
+    Width = 288
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -37
     Font.Name = 'Times New Roman'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
+    ReadOnly = True
+    RowSelect = True
     TabOrder = 0
+    OnSelectionChanged = TreeView1OnSelectionChanged
+    Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
     Items.Data = {
-      F9FFFFFF020002000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000
-      0000000D000000D09BD0B5D0BAD186D0B8D18F31FFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFF0000000000000000000D000000D09BD0B5D0BAD186D0B8D18F32
+      F9FFFFFF020002000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF010000000000
+      0000010D000000D09BD0B5D0BAD186D0B8D18F31FFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFF0100000000000000010F000000D0ADD0BBD0B5D0BCD0B5D0BDD18232
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000080000006C6563
+      74696F6E31FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000D00
+      0000D09BD0B5D0BAD186D0B8D18F32
     }
   end
   object Button1: TButton
@@ -1987,11 +1994,17 @@ object Form2: TForm2
     ParentFont = False
     TabOrder = 1
   end
-  object HTMLBrowserHelpViewer1: THTMLBrowserHelpViewer
-    BrowserPath = 'G:\Кейс\примерный интерфейс\book\Лекция1.html'
-    BrowserParams = '%s'
-    AutoRegister = False
-    left = 512
-    top = 104
+  object RichMemo1: TRichMemo
+    Left = 392
+    Height = 497
+    Top = 31
+    Width = 672
+    HideSelection = False
+    Lines.Strings = (
+      'RichMemo1'
+    )
+    ReadOnly = True
+    TabOrder = 2
+    ZoomFactor = 1
   end
 end

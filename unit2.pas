@@ -102,9 +102,15 @@ begin
          break;
        end;
      end;
-   end;
-   source := TFileStream.Create(lection_file, fmOpenRead);
-   RichMemo1.LoadRichText(source);
+
+     if FileExists(lection_file) then
+     begin
+       source := TFileStream.Create(lection_file, fmOpenRead);
+       RichMemo1.LoadRichText(source);
+
+       FreeAndNil(source);
+     end;
+     end;
 end;
 
 end.

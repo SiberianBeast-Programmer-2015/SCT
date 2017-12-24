@@ -7,7 +7,7 @@ interface
 uses
    Classes, SysUtils, FileUtil, SynHighlighterHTML, IpHtml, Ipfilebroker, Forms,
  Controls, Graphics, Dialogs, ExtCtrls, ComCtrls, StdCtrls, DbCtrls,
- LazHelpHTML, Buttons, RichMemo;
+ Buttons, RichMemo;
 
 type
 
@@ -19,14 +19,8 @@ type
     RichMemo1: TRichMemo;
     TreeView1: TTreeView;
     files_path: TStringList;
-    procedure BitBtn1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure Image1Click(Sender: TObject);
-    procedure IpHtmlPanel1Click(Sender: TObject);
-    procedure IpHtmlPanel1ConstrainedResize(Sender: TObject; var MinWidth,
-      MinHeight, MaxWidth, MaxHeight: TConstraintSize);
-    procedure Memo1Change(Sender: TObject);
     procedure TreeView1OnSelectionChanged(Sender: TObject);
   private
     { private declarations }
@@ -42,27 +36,6 @@ implementation
 {$R *.lfm}
 
 { TForm2 }
-
-procedure TForm2.Image1Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm2.IpHtmlPanel1Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm2.IpHtmlPanel1ConstrainedResize(Sender: TObject; var MinWidth,
-  MinHeight, MaxWidth, MaxHeight: TConstraintSize);
-begin
-
-end;
-
-procedure TForm2.Memo1Change(Sender: TObject);
-begin
-
-end;
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
@@ -80,10 +53,6 @@ begin
    else Exit();
 end;
 
-procedure TForm2.BitBtn1Click(Sender: TObject);
-begin
-
-end;
 
 procedure TForm2.TreeView1OnSelectionChanged(Sender: TObject);
 var
@@ -96,13 +65,14 @@ begin
    begin
      for file_name in files_path do
      begin
+       ShowMessage(TreeView1.Selected.Text + ' - ' +ExtractFileNameWithoutExt(file_name));
        if (TreeView1.Selected.Text = ExtractFileNameWithoutExt(file_name)) then
        begin
          lection_file:= ExtractFileDir(Application.ExeName) + PathDelim + 'static' + PathDelim + file_name;
          break;
        end;
      end;
-
+     ShowMessage(lection_file);
      if FileExists(lection_file) then
      begin
        source := TFileStream.Create(lection_file, fmOpenRead);
@@ -110,9 +80,7 @@ begin
 
        FreeAndNil(source);
      end;
-     end;
-   end;
-
+    end;
 end;
 
 end.

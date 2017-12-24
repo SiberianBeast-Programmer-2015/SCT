@@ -99,13 +99,20 @@ begin
        if (TreeView1.Selected.Text = ExtractFileNameWithoutExt(file_name)) then
        begin
          lection_file:= ExtractFileDir(Application.ExeName) + PathDelim + 'static' + PathDelim + file_name;
-         ShowMessage(lection_file);
          break;
        end;
      end;
+
+     if FileExists(lection_file) then
+     begin
+       source := TFileStream.Create(lection_file, fmOpenRead);
+       RichMemo1.LoadRichText(source);
+
+       FreeAndNil(source);
+     end;
+     end;
    end;
-   source := TFileStream.Create(lection_file, fmOpenRead);
-   RichMemo1.LoadRichText(source);
+
 end;
 
 end.

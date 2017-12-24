@@ -5,12 +5,9 @@ unit Unit2;
 interface
 
 uses
-   Classes, SysUtils, FileUtil, SynHighlighterHTML, IpHtml, Ipfilebroker, Forms,
- Controls, Graphics, Dialogs, ExtCtrls, ComCtrls, StdCtrls, DbCtrls,
- Buttons, RichMemo;
-
+   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
+   ComCtrls, StdCtrls, DbCtrls, Buttons, RichMemo;
 type
-
   { TForm2 }
 
   TForm2 = class(TForm)
@@ -65,14 +62,13 @@ begin
    begin
      for file_name in files_path do
      begin
-       ShowMessage(TreeView1.Selected.Text + ' - ' +ExtractFileNameWithoutExt(file_name));
        if (TreeView1.Selected.Text = ExtractFileNameWithoutExt(file_name)) then
        begin
          lection_file:= ExtractFileDir(Application.ExeName) + PathDelim + 'static' + PathDelim + file_name;
          break;
        end;
      end;
-     ShowMessage(lection_file);
+
      if FileExists(lection_file) then
      begin
        source := TFileStream.Create(lection_file, fmOpenRead);

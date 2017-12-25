@@ -1,22 +1,20 @@
 object Form1: TForm1
-  Left = 274
+  Left = 184
   Height = 596
-  Top = 109
+  Top = 94
   Width = 1166
   Caption = 'Учебное пособие'
   ClientHeight = 596
   ClientWidth = 1166
   Constraints.MaxHeight = 596
   Constraints.MaxWidth = 1166
-  OnCreate = FormCreate
   Position = poScreenCenter
   LCLVersion = '1.8.0.6'
-  object Image1: TImage
+  object image_bg: TImage
     Left = 0
     Height = 610
     Top = 0
     Width = 1175
-    OnClick = Image1Click
     ParentShowHint = False
     Picture.Data = {
       1754506F727461626C654E6574776F726B47726170686963EC22010089504E47
@@ -2350,7 +2348,7 @@ object Form1: TForm1
       49454E44AE426082
     }
   end
-  object Button2: TButton
+  object button_authors: TButton
     Left = 24
     Height = 30
     Top = 560
@@ -2362,11 +2360,11 @@ object Form1: TForm1
     Font.Name = 'Comic Sans MS'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
-    OnClick = Button2Click
+    OnClick = button_authorsClick
     ParentFont = False
     TabOrder = 0
   end
-  object Image2: TImage
+  object image_logo: TImage
     Left = 136
     Height = 210
     Top = 288
@@ -4283,7 +4281,7 @@ object Form1: TForm1
       0000000049454E44AE426082
     }
   end
-  object Button1: TButton
+  object button_start: TButton
     Left = 544
     Height = 97
     Top = 408
@@ -4295,7 +4293,7 @@ object Form1: TForm1
     Font.Name = 'Comic Sans MS'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
-    OnClick = Button1Click
+    OnClick = button_startClick
     ParentFont = False
     TabOrder = 1
   end

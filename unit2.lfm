@@ -8,9 +8,9 @@ object Form2: TForm2
   ClientHeight = 610
   ClientWidth = 1175
   OnCreate = FormCreate
-  Position = poDesktopCenter
+  Position = poScreenCenter
   LCLVersion = '1.8.0.6'
-  object Image1: TImage
+  object image_bg: TImage
     Left = 0
     Height = 610
     Top = 0
@@ -1979,7 +1979,7 @@ object Form2: TForm2
       FFFFFFFF0000000000000000000D000000D09BD0B5D0BAD186D0B8D18F32
     }
   end
-  object Button1: TButton
+  object button_goHome: TButton
     Left = 160
     Height = 44
     Top = 544
@@ -1990,7 +1990,7 @@ object Form2: TForm2
     Font.Name = 'Times New Roman'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
-    OnClick = Button1Click
+    OnClick = button_goHomeClick
     ParentFont = False
     TabOrder = 1
   end
@@ -2000,9 +2000,6 @@ object Form2: TForm2
     Top = 31
     Width = 672
     HideSelection = False
-    Lines.Strings = (
-      'RichMemo1'
-    )
     ReadOnly = True
     TabOrder = 2
     ZoomFactor = 1

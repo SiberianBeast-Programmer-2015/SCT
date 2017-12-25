@@ -1,14 +1,13 @@
 object Form1: TForm1
-  Left = 274
+  Left = 184
   Height = 596
-  Top = 109
+  Top = 94
   Width = 1166
   Caption = 'Учебное пособие'
   ClientHeight = 596
   ClientWidth = 1166
   Constraints.MaxHeight = 596
   Constraints.MaxWidth = 1166
-  OnCreate = FormCreate
   Position = poScreenCenter
   LCLVersion = '1.8.0.6'
   object Image1: TImage
@@ -16,7 +15,6 @@ object Form1: TForm1
     Height = 610
     Top = 0
     Width = 1175
-    OnClick = Image1Click
     ParentShowHint = False
     Picture.Data = {
       1754506F727461626C654E6574776F726B47726170686963EC22010089504E47

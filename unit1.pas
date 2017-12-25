@@ -13,12 +13,12 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
-    Button1: TButton;
-    Button2: TButton;
-    Image1: TImage;
-    Image2: TImage;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    button_start: TButton;
+    button_authors: TButton;
+    image_bg: TImage;
+    image_logo: TImage;
+    procedure button_startClick(Sender: TObject);
+    procedure button_authorsClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -34,14 +34,15 @@ implementation
 
 { TForm1 }
 
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TForm1.button_authorsClick(Sender: TObject);
 begin
    ShowMessage('SCT - команда Иркутского энергетческого колледжа'+#13#10+'Состав команды:'+#13#10+'Марков Данил Борисович'+#13#10+'Саловарова Диана Алексеевна'+#13#10+'Петрова Юлия Алексеевна'+#13#10+'Куратор команды:'+#13#10+'Ступина Анна Викторовна'+#13#10+ ' © Smart Cat''s Tutorial, 2017');
 end;
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TForm1.button_startClick(Sender: TObject);
 begin
   Form2.show;
+  Form1.Hide;
 end;
 end.
 

@@ -11,12 +11,12 @@ type
   { TForm2 }
 
   TForm2 = class(TForm)
-    Button1: TButton;
-    Image1: TImage;
+    button_goHome: TButton;
+    image_bg: TImage;
     RichMemo1: TRichMemo;
     TreeView1: TTreeView;
     files_path: TStringList;
-    procedure Button1Click(Sender: TObject);
+    procedure button_goHomeClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure TreeView1OnSelectionChanged(Sender: TObject);
   private
@@ -34,7 +34,7 @@ implementation
 
 { TForm2 }
 
-procedure TForm2.Button1Click(Sender: TObject);
+procedure TForm2.button_goHomeClick(Sender: TObject);
 begin
    Form2.Hide;
 end;

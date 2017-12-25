@@ -37,6 +37,7 @@ implementation
 procedure TForm2.button_goHomeClick(Sender: TObject);
 begin
    Form2.Hide;
+   Application.MainForm.Show;
 end;
 
 procedure TForm2.FormCreate(Sender: TObject);

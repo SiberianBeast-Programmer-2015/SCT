@@ -41,7 +41,7 @@ end;
 
 procedure TForm1.button_startClick(Sender: TObject);
 begin
-  Form2.show;
+  Form2.Show;
   Form1.Hide;
 end;
 end.
